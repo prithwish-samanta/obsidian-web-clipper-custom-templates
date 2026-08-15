@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "IMDB - Movie",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Movies]]",
+      "type": "multitext"
+    },
+    {
+      "name": "imdbId",
+      "value": "{{meta:property:imdb:pageConst}}",
+      "type": "text"
+    },
+    {
+      "name": "year",
+      "value": "{{schema:@Movie:datePublished|split:\\\"-\\\"|slice:0,1}}",
+      "type": "number"
+    },
+    {
+      "name": "contentRating",
+      "value": "{{schema:@Movie:contentRating}}",
+      "type": "text"
+    },
+    {
+      "name": "runtime",
+      "value": "{{schema:@Movie:duration|replace:\\\"PT\\\":\\\"\\\"}}",
+      "type": "text"
+    },
+    {
+      "name": "scoreImdb",
+      "value": "{{schema:@Movie:aggregateRating.ratingValue}}",
+      "type": "number"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "cover",
+      "value": "{{image}}",
+      "type": "text"
+    },
+    {
+      "name": "trailer",
+      "value": "{{schema:@Movie:trailer.url}}",
+      "type": "text"
+    },
+    {
+      "name": "genre",
+      "value": "{{schema:@Movie:genre|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "plot",
+      "value": "{{schema:@Movie:description}}",
+      "type": "text"
+    },
+    {
+      "name": "directors",
+      "value": "{{schema:@Movie:director[*].name|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "cast",
+      "value": "{{schema:@Movie:actor[*].name|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "last",
+      "value": "",
+      "type": "date"
+    },
+    {
+      "name": "watchlist",
+      "value": "",
+      "type": "checkbox"
+    }
+  ],
+  "triggers": [
+    "https://www.imdb.com/title"
+  ],
+  "noteNameFormat": "{{schema:@Movie:name}}",
+  "path": "References"
+}
