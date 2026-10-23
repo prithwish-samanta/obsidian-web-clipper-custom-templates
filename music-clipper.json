@@ -1,0 +1,48 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Music",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Music]]",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "artist",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "producer",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "created",
+			"value": "",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://genius.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "References"
+}

@@ -1,98 +1,93 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "IMDB - Show",
-	"behavior": "create",
-	"noteContentFormat": "",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Shows]]",
-			"type": "multitext"
-		},
-		{
-			"name": "imdbId",
-			"value": "{{meta:property:imdb:pageConst}}",
-			"type": "text"
-		},
-		{
-			"name": "year",
-			"value": "{{schema:@TVSeries:datePublished|split:\\\"-\\\"|slice:0,1}}",
-			"type": "number"
-		},
-		{
-			"name": "contentRating",
-			"value": "{{schema:@TVSeries:contentRating}}",
-			"type": "text"
-		},
-		{
-			"name": "runtime",
-			"value": "{{meta:property:og:description|split:\\\"|\\\"|first|trim}}",
-			"type": "text"
-		},
-		{
-			"name": "scoreImdb",
-			"value": "{{schema:@TVSeries:aggregateRating.ratingValue}}",
-			"type": "number"
-		},
-		{
-			"name": "rating",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "cover",
-			"value": "{{image}}",
-			"type": "text"
-		},
-		{
-			"name": "trailer",
-			"value": "{{schema:@TVSeries:trailer.url}}",
-			"type": "text"
-		},
-		{
-			"name": "genre",
-			"value": "{{schema:@TVSeries:genre|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "plot",
-			"value": "{{schema:@TVSeries:description}}",
-			"type": "text"
-		},
-		{
-			"name": "creators",
-			"value": "{{schema:@TVSeries:creator[*].name|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "cast",
-			"value": "{{schema:@TVSeries:actor[*].name|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "totalSeasons",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "totalEpisodes",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "last",
-			"value": "",
-			"type": "date"
-		},
-		{
-			"name": "watchlist",
-			"value": "",
-			"type": "checkbox"
-		}
-	],
-	"triggers": [
-		"https://www.imdb.com/title"
-	],
-	"noteNameFormat": "{{schema:@TVSeries:name}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "IMDB - Show",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Shows]]",
+      "type": "multitext"
+    },
+    {
+      "name": "imdbId",
+      "value": "{{meta:property:imdb:pageConst}}",
+      "type": "text"
+    },
+    {
+      "name": "year",
+      "value": "{{schema:@TVSeries:datePublished|split:\\\"-\\\"|slice:0,1}}",
+      "type": "number"
+    },
+    {
+      "name": "contentRating",
+      "value": "{{schema:@TVSeries:contentRating}}",
+      "type": "text"
+    },
+    {
+      "name": "runtime",
+      "value": "{{meta:property:og:description|split:\\\"|\\\"|first|trim}}",
+      "type": "text"
+    },
+    {
+      "name": "scoreImdb",
+      "value": "{{schema:@TVSeries:aggregateRating.ratingValue}}",
+      "type": "number"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "cover",
+      "value": "{{image}}",
+      "type": "text"
+    },
+    {
+      "name": "trailer",
+      "value": "{{schema:@TVSeries:trailer.url}}",
+      "type": "text"
+    },
+    {
+      "name": "genre",
+      "value": "{{schema:@TVSeries:genre|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "plot",
+      "value": "{{schema:@TVSeries:description}}",
+      "type": "text"
+    },
+    {
+      "name": "creators",
+      "value": "{{schema:@TVSeries:creator[*].name|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "cast",
+      "value": "{{schema:@TVSeries:actor[*].name|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "totalSeasons",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "totalEpisodes",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "created",
+      "value": "",
+      "type": "date"
+    }
+  ],
+  "triggers": [
+    "https://www.imdb.com/title"
+  ],
+  "noteNameFormat": "{{schema:@TVSeries:name}}",
+  "path": "References"
 }
